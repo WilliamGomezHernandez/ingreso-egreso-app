@@ -45,6 +45,7 @@ export class AuthService {
       }else{
         //no existe
         this._user = null ;
+        //o tambien this.userSubscription?.unsubscribe();
         if (this.userSubscription){
           this.userSubscription.unsubscribe();
         }
