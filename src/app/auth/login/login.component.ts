@@ -38,8 +38,10 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(){
+    if (this.uiSubscription){
+      this.uiSubscription.unsubscribe();
 
-    this.uiSubscription.unsubscribe();
+    }
 
 
   }

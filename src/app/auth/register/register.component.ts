@@ -41,7 +41,10 @@ export class RegisterComponent implements OnInit, OnDestroy {
        .subscribe(ui => this.cargando = ui.isLoading);
   }
   ngOnDestroy(){
-    this.uiSubscription.unsubscribe();
+    if (this.uiSubscription){
+      this.uiSubscription.unsubscribe();
+    }
+
 
   }
 
